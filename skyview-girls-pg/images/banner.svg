@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2160" height="700" viewBox="0 0 2160 700" role="img" aria-label="SkyView Girls PG">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc1ec"/><stop offset="1" stop-color="#2f8fd0"/></linearGradient></defs>
+  <rect width="2160" height="700" fill="url(#g)"/>
+  <g fill="#ffffff" opacity="0.92" transform="translate(1054.0,210.0) scale(2.2)"><path d="M12 3 2 12h3v9h6v-6h2v6h6v-9h3z"/></g>
+  <text x="50%" y="489" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-weight="700" font-size="63" fill="#ffffff">SkyView Girls PG</text>
+  <text x="50%" y="528" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-size="31" fill="#dcecf9">A safe &amp; homely stay in Dehradun</text>
+</svg>
