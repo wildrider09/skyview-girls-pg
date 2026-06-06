@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="440" viewBox="0 0 700 440" role="img" aria-label="Dining Area">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc1ec"/><stop offset="1" stop-color="#2f8fd0"/></linearGradient></defs>
-  <rect width="700" height="440" fill="url(#g)"/>
-  <g fill="#ffffff" opacity="0.92" transform="translate(324.0,132.0) scale(2.2)"><path d="M7 2v8a2 2 0 0 0 4 0V2H9v6H8V2zm10 0c-2 0-3 2-3 5v4h2v9h2V2z"/></g>
-  <text x="50%" y="308" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-weight="700" font-size="48" fill="#ffffff">Dining Area</text>
-  <text x="50%" y="340" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-size="24" fill="#dcecf9">Home-cooked meals</text>
-</svg>
