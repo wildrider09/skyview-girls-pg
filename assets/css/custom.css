@@ -1,5 +1,28 @@
 /* SkyView Girls PG - custom styles layered on top of Read Only (HTML5 UP) */
 
+/* =========================================================
+   THEME COLOR — change the whole site's accent in ONE place.
+   Just edit --accent (and optionally --accent-dark) below.
+   A few ready-to-use options:
+     Violet  (current): #6d28d9  / dark #581cae
+     Teal              : #0f9488  / dark #0a6e66
+     Rose / berry      : #c2185b  / dark #8e133f
+     Emerald green     : #10916d  / dark #0b6e52
+     Sky blue (original): #2f8fd0 / dark #2273ad
+   ========================================================= */
+:root {
+	--accent: #6d28d9;            /* primary brand colour */
+	--accent-dark: #581cae;       /* darker shade for hovers */
+	--accent-soft: rgba(109, 40, 217, 0.08); /* tints / soft backgrounds */
+}
+
+/* Polished hover for the primary buttons (uses the darker shade) */
+input[type="submit"].primary:hover,
+.button.primary:hover {
+	background-color: var(--accent-dark) !important;
+}
+
+
 /* Sidebar logo */
 #header > header .avatar img,
 .image.avatar img { border-radius: 8px; }
@@ -15,7 +38,7 @@
 #one .image.main.hero:after {
 	content: '';
 	position: absolute; inset: 0;
-	background: linear-gradient(180deg, rgba(22,58,95,0.15) 0%, rgba(22,58,95,0.65) 100%);
+	background: linear-gradient(180deg, rgba(30, 14, 60, 0.20) 0%, rgba(30, 14, 60, 0.70) 100%);
 }
 .hero-overlay {
 	position: absolute;
@@ -71,7 +94,7 @@
 }
 .highlight-grid .card .inner { padding: 1.25rem 1.5rem 1.5rem; }
 .highlight-grid .card h4 { margin-bottom: 0.5rem; }
-.highlight-grid .card h4 .icon { color: #2f8fd0; margin-right: 0.4rem; }
+.highlight-grid .card h4 .icon { color: var(--accent); margin-right: 0.4rem; }
 .highlight-grid .card p { margin-bottom: 0; font-size: 0.92em; }
 
 @media screen and (max-width: 736px) {
@@ -85,7 +108,7 @@
 /* Rooms & pricing */
 #three .features article .price {
 	float: right;
-	color: #2f8fd0;
+	color: var(--accent);
 	font-weight: 700;
 	font-size: 0.95em;
 	white-space: nowrap;
@@ -149,7 +172,7 @@ ul.contact-list li:before {
 	position: absolute;
 	left: 0;
 	top: 0;
-	color: #2f8fd0;
+	color: var(--accent);
 	font-size: 1.1em;
 }
 ul.contact-list li strong { color: #777; }
@@ -158,4 +181,129 @@ ul.contact-list li strong { color: #777; }
 @media screen and (max-width: 736px) {
 	.gallery-grid .image.fit img { height: 10rem; }
 	.map-embed { padding-bottom: 75%; }
+}
+
+
+/* ============================================================
+   NEW SECTIONS (theme-aware via --accent)
+   ============================================================ */
+
+/* ---- Trust strip (under hero intro) ---- */
+.trust-strip {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	padding: 0;
+	margin: 2rem 0 0;
+}
+.trust-strip li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1.35rem 0.75rem;
+	background: var(--accent-soft);
+	border: 1px solid #ececec;
+	border-radius: 10px;
+}
+.trust-strip li i { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.45rem; }
+.trust-strip li span { font-weight: 700; color: #555; line-height: 1.2; }
+.trust-strip li small { color: #999; font-size: 0.78em; margin-top: 0.15rem; }
+
+@media screen and (max-width: 736px) {
+	.trust-strip { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+}
+
+/* ---- Testimonials / reviews ---- */
+.testimonial-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+.testimonial {
+	background: #fff;
+	border: 1px solid #ececec;
+	border-left: 4px solid var(--accent);
+	border-radius: 10px;
+	padding: 1.5rem 1.5rem 1.25rem;
+	margin: 0;
+	box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.testimonial .stars {
+	color: var(--accent);
+	font-size: 0.85rem;
+	letter-spacing: 2px;
+	margin-bottom: 0.6rem;
+}
+.testimonial p { font-style: italic; color: #666; font-size: 0.95em; margin-bottom: 0; }
+.testimonial footer { margin-top: 0.85rem; }
+.testimonial footer strong { display: block; color: #555; }
+.testimonial footer span { color: #999; font-size: 0.85em; }
+
+@media screen and (max-width: 980px) {
+	.testimonial-grid { grid-template-columns: 1fr 1fr; }
+}
+@media screen and (max-width: 736px) {
+	.testimonial-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
+/* ---- FAQ ---- */
+.faq-list { margin-top: 1.5rem; }
+.faq-item {
+	background: #fff;
+	border: 1px solid #ececec;
+	border-radius: 10px;
+	padding: 1.1rem 1.4rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.faq-item h4 { margin-bottom: 0.4rem; color: #555; font-size: 1.05em; }
+.faq-item h4 i { color: var(--accent); margin-right: 0.5rem; }
+.faq-item p { margin-bottom: 0; font-size: 0.93em; color: #777; }
+
+/* ---- Contact form privacy note ---- */
+.form-note { margin-top: 0.9rem; font-size: 0.82em; color: #999; }
+.form-note i { color: var(--accent); margin-right: 0.35rem; }
+
+/* ---- Floating WhatsApp call-to-action ---- */
+.whatsapp-fab {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	z-index: 1000;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.85rem 1.3rem;
+	background: #25d366;
+	color: #fff !important;
+	font-weight: 700;
+	border: 0;
+	border-radius: 999px;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.whatsapp-fab:hover {
+	background: #1ebe5b;
+	color: #fff !important;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+}
+.whatsapp-fab i { font-size: 1.4rem; }
+
+@media screen and (max-width: 736px) {
+	.whatsapp-fab {
+		right: 1rem;
+		bottom: 1rem;
+		width: 3.4rem;
+		height: 3.4rem;
+		padding: 0;
+		justify-content: center;
+		border-radius: 50%;
+	}
+	.whatsapp-fab span { display: none; }
+	.whatsapp-fab i { font-size: 1.65rem; }
 }
