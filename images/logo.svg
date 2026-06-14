@@ -1,7 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="SkyView">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc1ec"/><stop offset="1" stop-color="#2f8fd0"/></linearGradient></defs>
-  <rect width="320" height="320" fill="url(#g)"/>
-  <g fill="#ffffff" opacity="0.92" transform="translate(134.0,96.0) scale(2.2)"><path d="M12 3 2 12h3v9h6v-6h2v6h6v-9h3z"/></g>
-  <text x="50%" y="224" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-weight="700" font-size="35" fill="#ffffff">SkyView</text>
-  <text x="50%" y="249" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-size="17" fill="#dcecf9">Girls PG</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SkyView Girls PG logo">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f9bea"/>
+      <stop offset="1" stop-color="#cdebff"/>
+    </linearGradient>
+    <clipPath id="badge"><rect x="2" y="2" width="60" height="60" rx="15"/></clipPath>
+  </defs>
+  <g clip-path="url(#badge)">
+    <!-- sky -->
+    <rect x="2" y="2" width="60" height="60" fill="url(#sky)"/>
+    <!-- sun -->
+    <circle cx="46" cy="20" r="8.5" fill="#ffd23f"/>
+    <!-- rolling green hills -->
+    <path d="M2 52 Q18 43 33 50 Q47 57 62 48 L62 62 L2 62 Z" fill="#33ac68"/>
+    <path d="M2 56 Q20 49 36 54 Q50 58 62 53 L62 62 L2 62 Z" fill="#2a9159" opacity="0.85"/>
+    <!-- cloud -->
+    <g fill="#ffffff">
+      <circle cx="23" cy="37" r="8"/>
+      <circle cx="33" cy="32" r="10.5"/>
+      <circle cx="43" cy="37" r="7.5"/>
+      <rect x="16.5" y="38" width="33" height="9" rx="4.5"/>
+    </g>
+  </g>
+  <!-- subtle border for definition on coloured backgrounds -->
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#ffffff" stroke-opacity="0.65" stroke-width="1.5"/>
 </svg>

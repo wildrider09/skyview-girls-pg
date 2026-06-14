@@ -307,3 +307,66 @@ ul.contact-list li strong { color: #777; }
 	.whatsapp-fab span { display: none; }
 	.whatsapp-fab i { font-size: 1.65rem; }
 }
+
+
+/* ============================================================
+   SIDEBAR — position LEFT + blue/green/yellow colour scheme
+   (overrides the template, which placed the sidebar on the right)
+   ============================================================ */
+
+/* ---- Move sidebar to the LEFT ---- */
+#header { left: 0; right: auto; }
+#wrapper { padding-left: 23em; padding-right: 0; }
+
+@media screen and (max-width: 1680px) {
+	#wrapper { padding-left: 21em; padding-right: 0; }
+}
+@media screen and (max-width: 1280px) {
+	#wrapper { padding-left: 20em; padding-right: 0; }
+}
+
+/* Off-canvas drawer slides in from the LEFT on tablet/mobile */
+@media screen and (max-width: 1024px) {
+	#header {
+		left: 0; right: auto;
+		-webkit-transform: translateX(-23em);
+		transform: translateX(-23em);
+	}
+	#wrapper { padding-left: 0; }
+	body.header-visible #wrapper,
+	body.header-visible #titleBar {
+		-webkit-transform: translateX(23em);
+		transform: translateX(23em);
+	}
+	#titleBar .toggle { left: 0; right: auto; }
+	#titleBar .toggle:before { left: 0; right: auto; background: #1746a0; }
+}
+@media screen and (max-width: 736px) {
+	#header {
+		-webkit-transform: translateX(-17em);
+		transform: translateX(-17em);
+	}
+	body.header-visible #wrapper,
+	body.header-visible #titleBar {
+		-webkit-transform: translateX(17em);
+		transform: translateX(17em);
+	}
+}
+
+/* ---- Sidebar colours: blue -> teal -> green, with yellow accents ----
+   (white text stays legible because every gradient stop is dark enough;
+    yellow is used only as an accent, never behind body text) */
+#header {
+	background: linear-gradient(160deg, #1746a0 0%, #1f7a8c 52%, #15803d 100%);
+}
+#header > nav ul li {
+	border-top-color: rgba(245, 197, 24, 0.32);   /* subtle yellow separators */
+}
+#header > nav ul li a.active {
+	background: #f5c518 !important;                /* yellow active item */
+	color: #15324f !important;                     /* dark text on yellow */
+}
+
+/* ---- Trust strip: keep label and sub-label on clearly separate lines ---- */
+.trust-strip li span { display: block; }
+.trust-strip li small { display: block; margin-top: 0.3rem; line-height: 1.35; }
