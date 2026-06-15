@@ -370,3 +370,30 @@ ul.contact-list li strong { color: #777; }
 /* ---- Trust strip: keep label and sub-label on clearly separate lines ---- */
 .trust-strip li span { display: block; }
 .trust-strip li small { display: block; margin-top: 0.3rem; line-height: 1.35; }
+
+
+/* ============================================================
+   MOBILE OPTIMISATIONS
+   ============================================================ */
+
+/* When the fixed top bar is shown (tablet/phone), offset in-page jumps
+   so section headings aren't hidden underneath it. */
+@media screen and (max-width: 1024px) {
+	#main > section { scroll-margin-top: 52px; }
+	html { scroll-behavior: smooth; }
+}
+
+/* Keep the trust badges tidy on small phones */
+@media screen and (max-width: 480px) {
+	.trust-strip { gap: 0.6rem; }
+	.trust-strip li { padding: 1rem 0.5rem; }
+	.trust-strip li i { font-size: 1.4rem; }
+	.trust-strip li span { font-size: 0.95em; }
+	.trust-strip li small { font-size: 0.72em; }
+}
+
+/* Comfortable tap target + safe spacing for the floating WhatsApp button
+   so it never sits under the phone's home indicator */
+@media screen and (max-width: 480px) {
+	.whatsapp-fab { right: 0.85rem; bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px)); }
+}
